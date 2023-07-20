@@ -16,7 +16,7 @@ WORKDIR /root/
 RUN wget -O - https://github.com/novnc/noVNC/archive/v1.4.0.tar.gz | tar -xzv -C /root/ && mv /root/noVNC-1.4.0 /root/novnc && ln -s /root/novnc/vnc_lite.html /root/novnc/index.html && \
     wget -O - https://github.com/novnc/websockify/archive/v0.11.0.tar.gz | tar -xzv -C /root/ && mv /root/websockify-0.11.0 /root/novnc/utils/websockify
 
-RUN wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks /usr/bin/winetricks && chmod +x /usr/bin/winetricks
+RUN wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks -O /usr/bin/winetricks && chmod +x /usr/bin/winetricks
 
 EXPOSE 8080
 
