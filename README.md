@@ -1,6 +1,9 @@
 # wine-docker-alpine
 
-This image is based on [solarkennedy/wine-x11-novnc-docker](https://github.com/solarkennedy/wine-x11-novnc-docker) with alpine and updated dependecies.
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/qwerzl/wine-novnc-alpine/latest)
+![Docker Pulls](https://img.shields.io/docker/pulls/qwerzl/wine-novnc-alpine)
+
+This image is based on [solarkennedy/wine-x11-novnc-docker](https://github.com/solarkennedy/wine-x11-novnc-docker) with alpine and updated dependecies. Image is a LOT smaller compared to the massive size of the ubuntu-based original one.
 
 This container runs:
 - Xvfb - X11 in a virtual framebuffer
