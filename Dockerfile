@@ -4,9 +4,9 @@ ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
-RUN apk add --no-cache wine wget xvfb x11vnc xdotool wget tar supervisor fluxbox gnupg net-tools 
+RUN apk add --no-cache wine wget xvfb x11vnc xdotool wget tar supervisor fluxbox gnupg net-tools bash
 
-ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ADD supervisord.conf /etc/supervisord.conf
 
 ENV WINEPREFIX /root/prefix
 ENV WINEARCH win64
@@ -20,4 +20,4 @@ RUN wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/wine
 
 EXPOSE 8080
 
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/bin/supervisord", "--configuration", "/etc/supervisord.conf"]
